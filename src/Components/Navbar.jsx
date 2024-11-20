@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
-  // const navLinks = <>
-  // <li> <Link to="/">Home</Link> </li>
-  // <li> <Link to="/about">About</Link> </li>
-  // <li> <Link to="/product">Product</Link> </li>
-  // <li> <Link to="/contact">Contact</Link> </li>
-  // </>
+  const navLinks = <>
+  <li> <Link to="/">Home</Link> </li>
+  <li> <Link to="/about">About</Link> </li>
+  <li> <Link to="/product">Product</Link> </li>
+  <li> <Link to="/contact">Contact</Link> </li>
+  </>
 
-  const {user} = useAuth()
+  // const {user} = useAuth()
 
 
   return (
@@ -38,17 +38,17 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            {/* {navLinks} */}
+            {navLinks}
           </ul>
         </div>
         <a className="text-4xl font-bold px-4">Gadget<span className="text-green-600">Shop</span></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          {/* {navLinks} */}
+          {navLinks}
         </ul>
       </div>
-      {
+      {/* {
         user? <div className="navbar-end gap-2"><UserDropdown></UserDropdown></div> : <div className="navbar-end gap-2">
         <Link to='/register'>
         <button className="btn bg-black text-white px-4 py-2 rounded-lg">Sign Up</button>
@@ -57,7 +57,7 @@ const Navbar = () => {
         <button className="btn bg-black text-white px-4 py-2 rounded-lg">Sign In</button>
         </Link>
       </div>
-      }
+      } */}
     </div>
   );
 };
